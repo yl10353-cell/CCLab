@@ -1,0 +1,115 @@
+<!-- 
+Template for IMA's Creative Coding Lab 
+
+Project A: Generative Creatures
+CCLaboratories Biodiversity Atlas 
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Family </title>
+
+    <!-- allow special characters, including Arabic, Chinese, Korean, Japanese, etc. -->
+    <meta charset="UTF-8">
+    <!-- link the style sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- import p5.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.3/lib/p5.min.js"></script>
+    <script>
+        // prevent scrolling when spacebar and arrow keys are pressed.
+        window.addEventListener("keydown", function (e) { if ([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) { e.preventDefault(); } }, false);
+    </script>
+</head>
+
+<body>
+    <!-- title -->
+    <div id="title-wrapper">
+        <h1 class="headline black">Family</h1>
+    </div>
+
+    <!-- main content -->
+    <div id="main-wrapper">
+        <div id="p5-canvas-container">
+            <!-- This is where your p5 sketch will be appended and appear! -->
+        </div>
+        <div class="two-columns">
+            <div class="left">
+                <h3 class="red">Scientific Name:Yuqi Liang</h3>
+                <p>Family</p>
+
+                <h3 class="red">Discovered by / at:</h3>
+                <p>Yuqi Liang, 2026.03.06</p>
+
+                <h3 class="green">Family:</h3>
+                <p>
+
+                    This creature represents family and the cycle of life. Two circles meet and travel together,
+                    then create a new circle that represents a child. As the child grows, the two original circles
+                    slowly disappear. The new circle continues moving forward, showing how life continues through
+                    generations.</p>
+            </div>
+            <div class="right">
+                <h3 class="green">Habitat:</h3>
+                <p>The creature lives in a simple, open environment with a changing gradient sky. The environment
+                    sometimes produces rain, representing difficult or challenging moments in life. The background color
+                    can change randomly, symbolizing different emotional or social conditions that influence the
+                    creature’s journey.</p>
+
+                <h3 class="green">Appearance:</h3>
+                <p>The creature is made of simple circular shapes with soft colors. At first it appears as two colorful
+                    circles that move toward each other. After they interact, a new green circle appears and grows
+                    larger. Over time, the original circles shrink and disappear, leaving the new circle to continue
+                    moving forward. The simple shapes highlight the idea of growth, connection, and transformation.</p>
+
+                <h3 class="green">Key Characteristics:</h3>
+                <ul>
+                    <li>Formed when two circles meet and create a new circle.</li>
+                    <li>Shows a life cycle where one generation replaces another.</li>
+                    <li>Reacts to the viewer and changes in the environment.</li>
+                    <li>Moves slowly and continuously across the screen.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="one-column">
+            <p>
+                <span class="yellow">What we know so far about Family?</span>
+                This project creates a generative “creature” that represents "family and the life cycle". The creature
+                begins as two circles moving toward each other from opposite sides of the screen. When they meet, they
+                travel together for a short time, showing companionship and connection. After this interaction, a new
+                circle appears between them and slowly grows.
+
+                The new circle represents a child or a new life created through interaction. As the child circle grows,
+                the two original circles slowly become smaller and disappear, suggesting aging and the passing of time.
+                The new circle then continues moving forward, symbolizing how life continues through the next
+                generation.
+
+                The idea behind this creature is that life is not isolated but formed through relationships, care, and
+                time. The animation repeats this process to show the continuous cycle of family and generational change.
+
+                <br>
+                <span class="yellow">Guidelines for human interaction with this creature</span> Humans can interact with
+                this creature using the mouse. When the mouse moves close to the creature, it will slightly move toward
+                the cursor, showing curiosity and sensitivity to its surroundings. When the viewer clicks the mouse, the
+                background environment changes, which represents changes in life conditions that can affect the
+                creature’s behavior.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="black">
+        <p>A CCLab project made by Yuqi Liang in 2026 Spring</p>
+    </div>
+
+    <!-- Home: Link back to the ATLAS page-->
+    <div id="home">
+        <a href="https://cclab.work/atlas">Back to the ATLAS</a>
+    </div>
+
+    <!-- Include your sketch.js file here -->
+    <script src="sketch.js" type="text/javascript"> </script>
+</body>
+
+</html>
