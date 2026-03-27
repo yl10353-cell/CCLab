@@ -38,17 +38,20 @@ class YuqiLiangDancer {
     this.y = startY;
     this.size = random(80, 150);
     this.offset = random(1000);
-    this.col = color(30, 30, 30, 200);
+    this.col = color(180, 180, 180, 180);
     this.t = random(1000);
   }
   update() {
-    this.x += map(noise(this.t), 0, 1, -1, 1);
-    this.y += map(noise(this.t + 100), 0, 1, -1, 1);
-    this.y += sin(frameCount * 0.05) * 0.5;
+    this.x += map(noise(this.t), 0, 1, -0.8, 0.8);
+    this.y += map(noise(this.t + 100), 0, 1, -0.8, 0.8);
+    this.y += sin(frameCount * 0.03) * 0.3;
     this.t += 0.01;
+    this.x = constrain(this.x, this.size / 2, width - this.size / 2);
+    this.y = constrain(this.y, this.size / 2, height - this.size / 2);
   }
-  display() {
 
+
+  display() {
 
 
     // the push and pop, along with the translate 
@@ -95,6 +98,7 @@ class YuqiLiangDancer {
 
     pop();
   }
+
   // ⬆️ draw your dancer above ⬆️
   // ******** //
 
@@ -115,22 +119,23 @@ class YuqiLiangDancer {
     fill(255);
     stroke(0);
   }
+
+
+
+
+
+  /*
+  GOAL:
+  The goal is for you to write a class that produces a dancing being/creature/object/thing. In the next class, your dancer along with your peers' dancers will all dance in the same sketch that your instructor will put together. 
+  
+  RULES:
+  For this to work you need to follow one rule: 
+    - Only put relevant code into your dancer class; your dancer cannot depend on code outside of itself (like global variables or functions defined outside)
+    - Your dancer must perform by means of the two essential methods: update and display. Don't add more methods that require to be called from outside (e.g. in the draw loop).
+    - Your dancer will always be initialized receiving two arguments: 
+      - startX (currently the horizontal center of the canvas)
+      - startY (currently the vertical center of the canvas)
+    beside these, please don't add more parameters into the constructor function 
+    - lastly, to make sure our dancers will harmonize once on the same canvas, please don't make your dancer bigger than 200x200 pixels. 
+  */
 }
-
-
-
-
-/*
-GOAL:
-The goal is for you to write a class that produces a dancing being/creature/object/thing. In the next class, your dancer along with your peers' dancers will all dance in the same sketch that your instructor will put together. 
-
-RULES:
-For this to work you need to follow one rule: 
-  - Only put relevant code into your dancer class; your dancer cannot depend on code outside of itself (like global variables or functions defined outside)
-  - Your dancer must perform by means of the two essential methods: update and display. Don't add more methods that require to be called from outside (e.g. in the draw loop).
-  - Your dancer will always be initialized receiving two arguments: 
-    - startX (currently the horizontal center of the canvas)
-    - startY (currently the vertical center of the canvas)
-  beside these, please don't add more parameters into the constructor function 
-  - lastly, to make sure our dancers will harmonize once on the same canvas, please don't make your dancer bigger than 200x200 pixels. 
-*/
