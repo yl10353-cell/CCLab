@@ -38,7 +38,7 @@ class YuqiLiangDancer {
     this.y = startY;
     this.size = random(80, 150);
     this.offset = random(1000);
-    this.col = color(180, 180, 180, 180);
+    this.col = color(30, 30, 30, 200);
     this.t = random(1000);
   }
   update() {
